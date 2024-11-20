@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function actualizarValor(valor) {
+                document.getElementById("valorRango").value = valor;
+            }
+        </script>
+    </head>
+    <body>
+        <form action="encuesta.php" method="post">
+
+            <!--Informacion personal-->
+            <fieldset>
+                <legend>Información personal</legend>
+
+                <!--Nombre-->
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required>
+                <br><br>
+
+                <!--Edad-->
+                <label for="edad">Edad</label>
+                <input type="number" name="edad" id="edad" min="18" max="100" required>
+                <br><br>
+
+                <!--Fecha de visita-->
+                <label for="fecha">Fecha de visita:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <br><br>
+
+            </fieldset>
+
+            <!-- Información de la encuesta -->
+            <fieldset>
+                <legend>Encuesta</legend>
+
+                <!--Calificacion general-->
+                <label for="calificacion">Calificacion:</label>
+                <input type="range" name="calificacion" id="calificacion" min="1" max="10"value="5" oninput="actualizarValor(this.value)">
+                <output id="valorRango">5</output>
+                <br><br>
+
+                <!-- Servicios utilizados -->
+                <label>Servicios utilizados:</label><br>
+                <label for="restaurante">Restaurante</label>
+                <input type="checkbox" id="restaurante" name="servicios[]" value="Restaurante"><br>
+                <label for="spa">Spa</label>
+                <input type="checkbox" id="spa" name="servicios[]" value="Spa"><br>
+                <label for="gimnasio">Gimnasio</label>
+                <input type="checkbox" id="gimnasio" name="servicios[]" value="Gimnasio"><br>
+                <label for="piscina">Piscina</label>
+                <input type="checkbox" id="piscina" name="servicios[]" value="Piscina">          
+                <br><br>
+                
+
+                <!-- Comentarios adicionales -->
+                <label for="comentarios">Comentarios adicionales:</label><br>
+                <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+                <br><br>
+
+                <!-- Selección de color favorito -->
+                <label for="color">Selecciona tu color favorito:</label>
+                <input type="color" id="color" name="color">
+                <br><br>
+            </fieldset>
+
+            <!--Boton para enviar-->
+            <button type="submit">Enviar</button>
+            <br><br>
+
+            <!--Boton para restablecer-->
+            <button type="reset">Restablecer</button>
+        </form>
+    </body>
+</html>

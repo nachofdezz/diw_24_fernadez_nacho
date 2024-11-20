@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo</title>
+    <script>
+        function mensajeArea3() {
+            alert("Has hecho clic en el Área 3");
+        }
+    </script>
+</head>
+<body>
+    <!-- Imagen con el mapa -->
+    <img src="https://via.placeholder.com/600x400" alt="Mapa de ejemplo" width="600" height="400" usemap="#mapaInteractivo">
+
+    <!-- Mapa definido con áreas -->
+    <map name="mapaInteractivo">
+        <!-- Area 1-->
+        <area shape="rect" coords="50,50,200,150" href="https://www.example.com/area1" alt="Área 1">
+
+        <!-- Area 2-->
+        <area shape="circle" coords="325,100,50" href="https://www.example.com/area2" alt="Área 2">
+
+        <!-- Area 3-->
+        <area shape="rect" coords="450,50,600,150" href="#" alt="Área 3" onclick="mensajeArea3(); return false;">
+    </map>
+</body>
+</html>

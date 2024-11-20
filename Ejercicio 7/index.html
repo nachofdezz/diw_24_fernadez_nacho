@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--Reproductor de audio-->
+        <audio controls>
+            <source src="Recursos/audio.mp3" type="audio/mpeg">
+            <source src="Recursos/audio.ogg" type="audio/oog"> 
+            Tu navegador no soporta el elemento audio
+        </audio>
+
+        <br><br>
+
+        <!--Reproductor de video-->
+        <video controls>
+            <source src="Recursos/movie.mp4" type="video/mp4">
+            <source src="Recursos/movie.webm" type="video/webm">
+
+            <!--Subtitulos-->
+            <track src="Recursos/subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+
+            Tu navegador no soporta el elemento video
+        </video>
+    </body>
+</html>

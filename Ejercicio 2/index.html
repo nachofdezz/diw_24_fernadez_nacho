@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="contacto.php" method="post" autocomplete="on">
+        
+        <fieldset>
+            <legend>Información Personal</legend>
+
+            <!--Nombre-->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+
+            <!--Correo electronico-->
+            <label for="email">Correo electronico:</label>
+            <input type="email" name="email" id="email" required>
+            <br><br>
+
+            <!--Telefono-->
+            <label for="telefono">Telefono:</label>
+            <input type="tel" name="telefono" id="telefono" pattern="[0-9]{9}">
+            <br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Mensaje</legend>
+
+            <!--Asunto-->
+            <label for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto" >
+                <option value="consulta">Consulta</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="reclama">Reclama</option>
+            </select>
+            <br><br>
+
+            <!--Mensaje-->
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" required></textarea>
+            <br><br>
+        </fieldset>
+        <!--Campo oculto-->
+        <input type="hidden" name="secreto" value="123abc">
+        <br><br>
+
+        <!--Boton para enviar-->
+        <button type="submit">Enviar</button>
+        <br><br>
+
+        <!--Boton para restablecer-->
+        <button type="reset">Restablecer</button>
+
+
+    </form>
+</body>
+</html>
