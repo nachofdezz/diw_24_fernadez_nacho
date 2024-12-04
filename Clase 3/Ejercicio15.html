@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diseño Responsivo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 16px; /* Tamaño base de fuente */
+        }
+        /* Barra de navegación */
+        .navegacion {
+            background-color: #333;
+            height: 10vh; /* 10% de la altura de la ventana */
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .navegacion a {
+            color: #fff;
+            margin-right: 2rem;
+            text-decoration: none;
+            font-size: 2vmin; /* Tamaño de fuente relativo a la ventana */
+        }
+        /* Contenido principal */
+        .contenido {
+            width: 80%; /* 80% del ancho del contenedor padre */
+            margin: 2rem auto; /* Centrado horizontal */
+        }
+        .contenido h2 {
+            font-size: 2rem; /* Tamaño de fuente relativo al root */
+            margin-bottom: 1rem;
+        }
+        .contenido p {
+            font-size: 1rem; /* Tamaño de fuente relativo al root */
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navegacion">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <div class="contenido">
+        <h2>Título de la Sección</h2>
+        <p>
+            Este es un párrafo de ejemplo para visualizar el tamaño de fuente definido con unidades relativas.
+            Puedes cambiar el tamaño de la ventana para ver cómo se adapta el diseño.
+        </p>
+    </div>
+</body>
+</html>

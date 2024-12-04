@@ -1,0 +1,108 @@
+:root{
+    --color-principal: #3498db;
+    --color-secundario: #2ecc71;
+    --color-error: #e74c3c;
+    --color-texto: #333;
+    --color-fondo: #f9f9f9;
+    --tamano-fuente: 1rem;
+    --espaciado: 1rem;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.formulario{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0 , 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.campo{
+    margin-bottom: var(--espaciado);
+}
+
+.campo label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--color-texto);
+    position: relative;
+}
+
+.campo label span{
+    color: var(--color-error);
+    font-weight: bold;
+}
+
+.campo input, .campo textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: var(--tamano-fuente);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--color-principal);
+    background-color: #eef7ff;
+    outline: none;
+}
+
+.campo input:invalid,
+.campo textarea:invalid {
+    border-color: var(--color-error);
+}
+
+.campo input:valid,
+.campo textarea:valid {
+    border-color: var(--color-secundario);
+}
+
+.boton {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: var(--tamano-fuente);
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-principal);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:valid {
+    background-color: var(--color-secundario);
+}
+
+/* Pseudoelementos */
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.campo label::after {
+    content: " *";
+    color: var(--color-error);
+    font-weight: bold;
+}
+
+::selection {
+    background-color: var(--color-principal);
+    color: white;
+}

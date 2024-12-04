@@ -1,0 +1,15 @@
+.boton-fondo-azul{
+    background-color: blue;
+}
+
+.boton-fondo-naranja{
+    background-color: orange;
+}
+
+.boton-fondo-rojo{
+    background-color: red;
+}
+
+.boton-borde-azul{
+    border: 3px blue;
+}

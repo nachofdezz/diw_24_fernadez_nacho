@@ -1,0 +1,82 @@
+:root{
+    --color-disponible: #2ecc71;
+    --color-agotado: #e74c3c;
+    --color-nuevo: #001aff;
+    --color-fondo-par: #a8a5a5;
+    --color-fondo-impar: #fffc59;
+    --precio-original: #999;
+    --precio-descuento: #e67e22;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.lista-productos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+}
+
+.producto {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s;
+}
+
+.producto:nth-child(even){
+    background-color: var(--color-fondo-par);
+}
+
+.producto.producto:nth-child(odd){
+    background-color: var(--color-fondo-impar);
+}
+
+.producto:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto.disponible{
+    color: var(--color-disponible);
+}
+
+.producto.agotado{
+    color: var(--color-agotado);
+    position: relative;
+}
+
+.producto.nuevo{
+    color: var(--color-nuevo);
+}
+
+.producto:not(.agotado){
+    font-weight: bold;
+}
+
+.producto.nuevo::before{
+    content: "🆕 ";
+    font-weight: bold;
+}
+
+.producto.agotado::after{
+    content: "❌";
+    position: absolute;
+    margin-left: 15px;
+    color: var(--color-agotado);
+    font-weight: bold;
+}
+
+.producto span::first-line{
+    font-style: italic;
+    text-decoration: underline;
+}

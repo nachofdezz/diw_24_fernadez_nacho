@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Galería de Imágenes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem;
+        }
+        .galeria .imagen {
+            width: 30vmax; /* Ancho relativo al tamaño máximo de la ventana */
+            height: 200px; /* Altura fija en píxeles */
+            margin: 1rem; /* Margen de 1rem */
+            border: 0.5cm solid #000; /* Borde de 0.5cm */
+            background-size: cover;
+            background-position: center;
+        }
+        /* Ejemplos de imágenes */
+        .imagen1 {
+            background-image: url('imagen1.jpg');
+        }
+        .imagen2 {
+            background-image: url('imagen2.jpg');
+        }
+        .imagen3 {
+            background-image: url('imagen3.jpg');
+        }
+        .imagen4 {
+            background-image: url('imagen4.jpg');
+        }
+    </style>
+</head>
+<body>
+    <div class="galeria">
+        <div class="imagen imagen1"></div>
+        <div class="imagen imagen2"></div>
+        <div class="imagen imagen3"></div>
+        <div class="imagen imagen4"></div>
+    </div>
+</body>
+</html>
