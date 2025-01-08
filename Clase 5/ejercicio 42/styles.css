@@ -1,0 +1,28 @@
+.contenedor{
+    display: flex;
+    background-color: darkgreen;
+    height: 99vh;
+    
+}
+
+.columna-izquierda{
+    flex: 2;
+    padding: 20px;
+    color: white;
+
+}
+
+.columna-derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    
+}
+  
+.fila {
+    flex: 1;
+    border: 1px solid lightgray;
+    color: white;
+    display: flex;
+}
