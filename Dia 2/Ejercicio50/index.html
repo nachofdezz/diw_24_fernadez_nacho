@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 200px;
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: 150px 150px 150px;
+            grid-template-rows: 50px 50px 50px;
+            grid-template-areas: 
+                "celda2 celda3 celda4"
+                "celda5 celda6 celda1";
+            grid-gap: 1px;
+        }
+
+        .celda{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .celda1{
+            grid-area: celda1;
+        }
+
+        .celda2{
+            grid-area: celda2;
+        }
+
+        .celda3{
+            grid-area: celda3;
+        }
+
+        .celda4{
+            grid-area: celda4;
+        }
+
+        .celda5{
+            grid-area: celda5;
+        }
+
+        .celda6{
+            grid-area: celda6;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="celda celda1">celda 1</div>
+        <div class="celda celda2">celda 2</div>
+        <div class="celda celda3">celda 3</div>
+        <div class="celda celda4">celda 4</div>
+        <div class="celda celda5">celda 5</div>
+        <div class="celda celda6">celda 6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px;
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: 50px 210px;
+            grid-template-rows: 50px auto 50px;
+            grid-template-areas: 
+                "celda5 celda1"
+                "celda2 celda3"
+                "celda4 celda4";
+            grid-gap: 1px;
+        }
+
+        .celda{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .celda1{
+            background-color: orange;
+            grid-area: celda1;
+        }
+
+        .celda2{
+            background-color: cadetblue;
+            grid-area: celda2;
+        }
+
+        .celda3{
+            background-color: cadetblue;
+            grid-area: celda3;
+        }
+
+        .celda4{
+            grid-area: celda4;
+        }   
+
+        .celda5{
+            background-color: white;
+            grid-area: celda5;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="celda celda1">celda 1</div>
+        <div class="celda celda2">celda 2</div>
+        <div class="celda celda3">celda 3: <br>contenido que marca el alto de la parte central de la página</div>
+        <div class="celda celda4">celda 4</div>
+        <div class="celda celda5"></div>
+    </div>
+</body>
+</html>

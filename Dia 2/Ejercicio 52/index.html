@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 200px;
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: 75px 150px;
+            grid-template-rows: 50px 50px 50px;
+            grid-template-areas: 
+                "celda1 celda2"
+                "celda3 celda4"
+                "celda5 celda4";
+            grid-gap: 1px;
+        }
+
+        .celda{
+            background-color: black;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .subcelda{
+            background-color: white;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .celda1{
+            grid-area: celda1;
+        }
+
+        .celda2{
+            grid-area: celda2;
+        }
+
+        .celda3{
+            grid-area: celda3;
+        }
+
+        .subcont{
+            padding: 7px 10px;
+            display: grid;
+            grid-template-columns: 65px 65px;
+            grid-template-rows: 25px 25px 25px;
+            grid-template-areas: 
+                "subcelda1 subcelda1"
+                "subcelda2 subcelda3"
+                "subcelda4 subcelda5";
+            grid-gap: 1px;
+        }
+        .celda4{
+            grid-area: celda4;
+        }
+
+        .celda5{
+            grid-area: celda5;
+        }
+
+        .subcelda1{
+            grid-area: subcelda1;
+        }
+
+        .subcelda2{
+            grid-area: subcelda2;
+        }
+
+        .subcelda3{
+            grid-area: subcelda3;
+        }
+
+        .subcelda4{
+            grid-area: subcelda4;
+        }
+
+        .subcelda5{
+            grid-area: subcelda5;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="celda celda1">celda 1</div>
+        <div class="celda celda2">celda 2</div>
+        <div class="celda celda3">celda 3</div>
+        <div class="celda celda4"> 
+            <div class="subcont">
+                <div class="subcelda subcelda1">Grid Anidado</div>
+                <div class="subcelda subcelda2">Lista 2</div>
+                <div class="subcelda subcelda3">Lista 3</div>
+                <div class="subcelda subcelda4">Lista4</div>
+                <div class="subcelda subcelda5">Lista 5</div>
+            </div>
+        </div>
+        <div class="celda celda5">celda 5</div>
+    </div>
+</body>
+</html>
