@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejercicio 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Georgia", "Times New Roman", Times, serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .card-title {
+      font-weight: bold;
+    }
+    .carousel-item img {
+      height: 300px; 
+      object-fit: cover;
+    }
+
+    .card-img-top {
+      height: 200px; 
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/Logo.png" alt="Logo">
+        <span>Diario Digital</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContenido" aria-controls="navbarContenido" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContenido">
+        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cuenta</a>
+          </li>
+        </ul>
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+        <button class="btn btn-outline-primary me-2 d-none d-sm-block" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Log In
+        </button>
+        <a href="registro.html" class="btn btn-primary d-none d-sm-block">Darse de alta</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="nombre@ejemplo.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="loginPassword" placeholder="Contraseña" required>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+            <div>
+              ¿No tienes cuenta? <a href="registro.html">Crea una aquí</a>.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+
+    <div id="newsCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/noticia1.jpg" class="d-block w-100" alt="Noticia 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>El PP bonificará el IBI en las ciudades en las que gobierna</h5>
+            <p>El líder del Partido Popular, Alberto Núñez Feijóo, anunció ayer la firma de un manifiesto en el que los alcaldes de la formación se...</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/noticia2.png" class="d-block w-100" alt="Noticia 2">
+          <div class="carousel-caption d-none d-md-block text-dark">
+            <h5>Funcionarios de EEUU viajan a Europa para conversaciones clave sobre Ucrania</h5>
+            <p>El asesor de seguridad nacional del presidente Donald Trump dijo el domingo que los principales funcionarios del gobierno se reunirán esta...</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/noticia3.jpg" class="d-block w-100" alt="Noticia 3">
+          <div class="carousel-caption d-none d-md-block text-dark">
+            <h5>Donald Trump y los cachorros de Elon Musk dinamitan el sistema desde dentro</h5>
+            <p>Marko Elez es un ingeniero informático de 25 años especializado en inteligencia artificial que trabajaba en SpaceX y Starlink, las compañías...</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/foto1.png" class="card-img-top" alt="Imagen Noticia 1">
+          <div class="card-body">
+            <h5 class="card-title">Trump habla con Putin del fin de la guerra en Ucrania: "Él quiere que la gente deje de morir"</h5>
+            <p class="card-text">El presidente estadounidense, Donald Trump, ha revelado en una entrevista con el diario New York Post que ha hablado con el presidente ruso, Vladimir Putin, aunque no ha querido aclarar cuándo o si han conversado más de una vez desde que ganó las elecciones del pasado mes de noviembre.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Hace 1 hora</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/foto2.png" class="card-img-top" alt="Imagen Noticia 2">
+          <div class="card-body">
+            <h5 class="card-title">Feijóo se compromete a crear un "protocolo antiokupación" y anuncia bonificaciones del IBI en las ciudades del PP</h5>
+            <p class="card-text">El presidente del Partido Popular, Alberto Núñez Feijóo, ha hablado en la clausura del I Foro de Grande Ciudades en Zaragoza, entre otras cuestiones, sobre los retos de España en materia de vivienda e inmigración. Feijóo y los alcaldes del PP han rubricado un protocolo de actuación en materia de vivienda para aumentar la oferta.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Hace 2 horas</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/foto3.png" class="card-img-top" alt="Imagen Noticia 3">
+          <div class="card-body">
+            <h5 class="card-title">Un año después de la tragedia de Barbate: "Que jamás se vuelva a dar una situación de desventaja tan grande"</h5>
+            <p class="card-text">Mónica Mogica y Fuensanta Sánchez, portavoces de la asociación Nuestro corazón por bandera, han leído unas emocionantes palabras en el acto conmemorativo que la plataforma ha organizado este domingo en Barbate en el aniversario de la muerte de los dos guardias civiles.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Hace 3 horas</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

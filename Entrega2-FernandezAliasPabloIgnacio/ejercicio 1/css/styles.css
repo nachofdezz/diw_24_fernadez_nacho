@@ -1,0 +1,44 @@
+.imagen-categoria {
+  width: 100%;
+  height: 225px; 
+  object-fit: cover;
+}
+
+.formulario-busqueda .form-control {
+  height: 50px; 
+  font-size: 1.2rem; 
+}
+
+.boton-busqueda {
+  background-color: orange;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton-busqueda i {
+  color: white;
+  font-size: 1.5rem; 
+}
+
+.navbar-brand {
+  color: orange;
+}
+
+.btn-pequeno {
+  font-size: 1.3rem; 
+  padding: 0.25rem 0.5rem; 
+  position: absolute;
+  left: 10%; 
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+}
+
+p, h5{
+    background-color: rgb(116, 116, 116);
+}
